@@ -1,0 +1,37 @@
+{
+  "timeZone": "America/New_York",
+  "dependencies": {
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "sheets": {
+    "macros": [{
+      "menuName": "number",
+      "functionName": "number",
+      "defaultShortcut": "Ctrl+Alt+Shift+1"
+    }, {
+      "menuName": "eur",
+      "functionName": "eur",
+      "defaultShortcut": "Ctrl+Alt+Shift+2"
+    }, {
+      "menuName": "gbp",
+      "functionName": "gbp",
+      "defaultShortcut": "Ctrl+Alt+Shift+3"
+    }, {
+      "menuName": "usd",
+      "functionName": "usd",
+      "defaultShortcut": "Ctrl+Alt+Shift+4"
+    }, {
+      "menuName": "parameter",
+      "functionName": "parameter",
+      "defaultShortcut": "Ctrl+Alt+Shift+5"
+    }, {
+      "menuName": "link",
+      "functionName": "link",
+      "defaultShortcut": "Ctrl+Alt+Shift+6"
+    }, {
+      "menuName": "clear_formatting",
+      "functionName": "clear_formatting",
+      "defaultShortcut": "Ctrl+Alt+Shift+7"
+    }]
+  }
+}

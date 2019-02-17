@@ -45,6 +45,22 @@ function onOpen() {
   ss.addMenu("Detective", menuEntries);
 }
 
+function trace_precedents(){
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var formula = ss.getActiveCell().getFormula();
+  var regex = /[=(&]*('\w* *\w*'![A-Z]{1,3}[0-9]{1,4})|(\w* *\w*![A-Z]{1,3}[0-9]{1,4})|([A-Z]{1,3}[0-9]{1,4})[=)&]*/g;
+  Logger.log(formula);
+  if(formula.charAt(0) == "="){
+    formula = formula.replace("$","");
+    var matches = regex.exec(formula)
+    if(matches.length > 0){
+      //Logger.log(matches);
+      ss.getRange(matches[1]).activate();
+      return
+    }
+  }
+}
+
 function trace_dependents(){
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheets = ss.getSheets();
@@ -64,7 +80,7 @@ function trace_dependents(){
           var cell = range.getCell(i+1, j+1);
           var cellRef = cell.getA1Notation();
           sheet.getRange(cellRef).activate();
-          return 
+          return
         }
       }
     }
@@ -72,7 +88,3 @@ function trace_dependents(){
   SpreadsheetApp.getUi().alert('No dependencies found');
 }
 
-function trace_precedents(){
-  console.log('this is under development');
-  Logger.log('this is under development');
-}

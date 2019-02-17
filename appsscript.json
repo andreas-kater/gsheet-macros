@@ -32,6 +32,14 @@
       "menuName": "clear_formatting",
       "functionName": "clear_formatting",
       "defaultShortcut": "Ctrl+Alt+Shift+7"
+    }, {
+      "menuName": "trace_dependents",
+      "functionName": "trace_dependents",
+      "defaultShortcut": "Ctrl+Alt+Shift+8"
+    }, {
+      "menuName": "trace_precendents",
+      "functionName": "trace_precendents",
+      "defaultShortcut": "Ctrl+Alt+Shift+9"
     }]
   }
 }

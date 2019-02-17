@@ -45,7 +45,7 @@ function onOpen() {
   ss.addMenu("Detective", menuEntries);
 }
 
-function traceDependents(){
+function trace_dependents(){
   var dependents = []
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var currentCell = ss.getActiveCell();

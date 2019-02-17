@@ -82,3 +82,8 @@ function trace_dependents(){
   }
   currentCell.setNote(output);
 }
+
+function trace_precedents(){
+  console.log('this is under development');
+  Logger.log('this is under development');
+}

@@ -54,8 +54,11 @@ function trace_precedents(){
     formula = formula.replace("$","");
     var matches = regex.exec(formula)
     if(matches.length > 0){
-      //Logger.log(matches);
-      ss.getRange(matches[1]).activate();
+      var goto = matches[1];
+      if (!goto){
+        goto = matches[0];
+      }
+      ss.getRange(goto).activate();
       return
     }
   }

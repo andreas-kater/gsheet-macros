@@ -19,10 +19,16 @@ function eur() {
   spreadsheet.getActiveRangeList().setNumberFormat('[$€]#,##0')
 };
 
+function datapoint() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  spreadsheet.getActiveRangeList().setBackground(null);
+  spreadsheet.getActiveRangeList().setBorder(true, true, true, true, true, true, '#188038', SpreadsheetApp.BorderStyle.SOLID);
+};
+
 function parameter() {
   var spreadsheet = SpreadsheetApp.getActive();
   spreadsheet.getActiveRangeList().setBackground(null);
-  spreadsheet.getActiveRangeList().setBorder(true, true, true, true, null, null, '#0000ff', SpreadsheetApp.BorderStyle.SOLID);
+  spreadsheet.getActiveRangeList().setBorder(true, true, true, true, true, true, '#0000ff', SpreadsheetApp.BorderStyle.SOLID);
 };
 
 function link() {
@@ -89,5 +95,9 @@ function trace_dependents(){
     }
   }
   SpreadsheetApp.getUi().alert('No dependencies found');
+}
+
+function sheetName() {
+  return SpreadsheetApp.getActiveSpreadsheet().getActiveSheet().getName();
 }
 

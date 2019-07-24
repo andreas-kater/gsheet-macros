@@ -101,3 +101,6 @@ function sheetName() {
   return SpreadsheetApp.getActiveSpreadsheet().getActiveSheet().getName();
 }
 
+function weekdayShort(cell) {
+  return ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'][new Date(cell).getDay()]
+}

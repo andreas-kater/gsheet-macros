@@ -22,14 +22,15 @@ fi
 echo "ScriptID: "
 read scriptId
 echo "{\"scriptId\":\"$scriptId\"}" > .clasp.json
+# clasp create --title "$1" --type sheets
 
 #add my standard macros
-ln -sf ../my-macros/macros.js
-ln -sf ../my-macros/appsscript.json
-ln -sf ../my-macros/stitch-sync.js
+ln -sf ../../my-macros/macros.js
+ln -sf ../../my-macros/appsscript.json
+ln -sf ../../my-macros/stitch-sync.js
 
 #push to project
-clasp push
+clasp push --force
 
 #make sure you're in the newly created directory
 exec zsh
